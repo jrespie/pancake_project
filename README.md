@@ -1,6 +1,6 @@
 ## Pancakes
 
-This is a demo project to show you how React.js works.
+This is a demo project that comprises part of a wider React.js tutorial
 
 ## Set up
 
