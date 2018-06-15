@@ -5,11 +5,10 @@ class Pancake extends Component {
 	constructor(props){
 		super(props);
 		this.state={temperature: 'hot'}
-		this.handleClick = this.handleClick.bind(this)
 	  }
 
-  handleClick(){
-	  if(this.state.temperature=='hot')
+  handleClick = () => {
+	  if(this.state.temperature==='hot')
 		  this.setState({temperature: 'cold'})
 	  else
 	  	  this.setState({temperature: 'hot'})

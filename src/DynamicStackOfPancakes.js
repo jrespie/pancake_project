@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Butter from './Butter';
 import Pancake from './Pancake';
 import Plate from './Plate';
-import Button from './Button';
 import './pancake.css';
 
 let key = 0;
@@ -15,7 +14,7 @@ class DynamicStackOfPancakes extends Component {
   constructor(props){
 	  super(props)
 	  this.state={
-					  listOfPancakes: [<Pancake key={getKey()}/>,<Pancake key={getKey()} />,<Pancake key={getKey()}/>],
+					  listOfPancakes: [<Pancake key={getKey()} flavor=""/>,<Pancake key={getKey()} flavor=""/>,<Pancake key={getKey()} flavor=""/>],
 					  nextPancakeFlavor: "Plain"
 				}
 	  this.addAPancake=this.addAPancake.bind(this);
@@ -31,12 +30,12 @@ class DynamicStackOfPancakes extends Component {
   render() {
 	console.log(this.state.listOfPancakes);
     return (
-		<div class="stack">
+		<div className="stack">
 			<Butter />
 			{this.state.listOfPancakes.map(x => x)}
 			<Plate />
 			<button onClick={this.addAPancake}>Add a pancake!</button>
-			<div class="pancakeoptions">
+			<div className="pancakeoptions">
 				<span>What flavor?</span>
 				<select id="flavor">
 					<option value="">Plain</option>
@@ -48,7 +47,6 @@ class DynamicStackOfPancakes extends Component {
 			</div>
 		</div>
 	)
-
   }
 }
 
