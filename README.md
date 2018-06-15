@@ -10,17 +10,14 @@ Pull down this repo, then run `npm install` - this should put React and all the 
 
 Simply type `npm start` and the demo project should open in your web browser
 
-## Part one
+## Make some changes
 
-For part one, we aren't going to look at the code, just play with the tool
+A good way to start experimenting with this is to edit index.js
 
-## Part two
+Try changing `<DynamicStackOfPancakes />` to `<Pancake />`.
+You'll also need to uncomment the line `import Pancake from './Pancake';`
 
-For part two, we are going to play with some components inside the code.
-You will need to open the file `index.js`
-Uncomment the line
-`//ReactDOM.render(<StackOfPancakes />, document.getElementById('root'));`
-and comment out the line
-`ReactDOM.render(<DynamicStackOfPancakes />,document.getElementById('root'));`
+Then try adding a prop to that Pancake component, or, adding different components.
 
-You might need to restart the project once you've changed this
+See what you can come up with!
+
