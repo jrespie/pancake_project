@@ -14,9 +14,8 @@ class Pancake extends Component {
 	  	  this.setState({temperature: 'hot'})
   }
   render() {
-	const myFlavor="pancake "+this.props.flavor+" "+this.state.temperature
     return (
-		<div className={myFlavor} onClick={this.handleClick}>
+		<div className={"pancake "+this.props.flavor+" "+this.state.temperature} onClick={this.handleClick} id={this.props.id}>
 	  </div>
     );
   }

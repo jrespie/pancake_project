@@ -14,16 +14,17 @@ class DynamicStackOfPancakes extends Component {
   constructor(props){
 	  super(props)
 	  this.state={
-					  listOfPancakes: [<Pancake key={getKey()} flavor=""/>,<Pancake key={getKey()} flavor=""/>,<Pancake key={getKey()} flavor=""/>],
-					  nextPancakeFlavor: "Plain"
+				  listOfPancakes: [<Pancake id={"pancake-"+key} key={getKey()} flavor="" />,<Pancake id={"pancake-"+key} key={getKey()} flavor=""/>,<Pancake id={"pancake-"+key} key={getKey()} flavor=""/>],
+				  nextPancakeFlavor: "Plain"
 				}
+	  this.state.listOfPancakes.reverse();
 	  this.addAPancake=this.addAPancake.bind(this);
   }
 
   addAPancake(){
 	  const newPancakeStack=this.state.listOfPancakes;
 	  const nextPancakeFlavor=document.getElementById("flavor").value;
-	  newPancakeStack.unshift(<Pancake key={getKey()} flavor={nextPancakeFlavor}/>);
+	  newPancakeStack.unshift(<Pancake id={"pancake-"+key} key={getKey()} flavor={nextPancakeFlavor} />);
 	  this.setState({ listOfPancakes: newPancakeStack });
   }
 
